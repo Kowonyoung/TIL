@@ -111,22 +111,5 @@ $ docker exec -it mysql_server2 /bin/bash
 
 ![image-20210214004402994](https://user-images.githubusercontent.com/77096463/108019031-aa378700-705c-11eb-9dc6-7fb333dee14b.png)
 
-mymysql 이미지 태그 변경
 
-```
-$ docker tag mymysql:latest mementohaeri/mymysql:1.0
-```
-
-hub에 이미지 업로드
-
-```
-$ docker push mementohaeri/mymysql:1.0
-```
-
-7. [최종] 컨테이너 명령어 실행 
-
-```
-$ docker run -d -p 23306:3306 --network my-network --name mysql_server2 mementohaeri/mymysql:1.0
-$ docker run -d -p 8000:8000 --network my-network --name mydjango2 mementohaeri/mydjango:1.0
-```
 
